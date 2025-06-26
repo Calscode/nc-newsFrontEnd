@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 function ArticleCard({ article }) {
     return (
+      <div className="page-container">
       <div className="article-card">
         <Link to={`/articles/${article.article_id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
           <h3>{article.title}</h3>
@@ -14,6 +15,7 @@ function ArticleCard({ article }) {
           <p>Topic: {article.topic.charAt(0).toUpperCase() + article.topic.slice(1)}</p>
           <p>Votes: {article.votes}</p>
         </Link>
+      </div>
       </div>
     );
   }

@@ -27,8 +27,9 @@ function Home() {
 
   return (
     <main>
+        <div className="page-container">
 
-      <h2>Cals News of the World</h2>
+      <h2>World News</h2>
       <p>Welcome to the best news in the world!</p>
       <p>Find out about everything</p>
       <p>News news news!</p>
@@ -54,6 +55,7 @@ function Home() {
           />
         </div>
       )}
+      </div>
     </main>
   );
 }

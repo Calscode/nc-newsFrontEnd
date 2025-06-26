@@ -13,6 +13,7 @@ function LoginForm() {
   };
 
   return (
+    <div className="login-wrapper">
     <form onSubmit={handleSubmit}>
       <input
         type="text"
@@ -22,6 +23,7 @@ function LoginForm() {
       />
       <button type="submit">Log in</button>
     </form>
+    </div>
   );
 }
 

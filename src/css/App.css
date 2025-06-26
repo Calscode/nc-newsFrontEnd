@@ -18,7 +18,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -57,10 +57,28 @@ button:hover {
   border-color: var(--primary-red-dark);
 }
 
-/* Header styling */
 header {
-  padding: 1rem 0;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* vertically center the title and nav */
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+header h1 {
+  font-size: 2rem; /* bigger */
+  margin: 0;
+  color: var(--primary-red);
+  text-align: left;
+}
+
+header nav a {
+  color: var(--primary-red);
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: var(--primary-red-dark);
 }
 
 /* Article container - mobile first, 1 column */
@@ -68,20 +86,14 @@ header {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  width: 100%;
-  max-width: 900px;
-  padding: 1rem;
-  box-sizing: border-box;
 }
 
-/* Tablet and up: 2 columns */
 @media (min-width: 768px) {
   .articles-container {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-/* Article card styling */
 .article-card {
   background-color: var(--bg-light);
   border: 1px solid var(--primary-red);
@@ -92,19 +104,15 @@ header {
   text-align: center;
 }
 
-/* Article detail page */
 .article-detail-page {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 1rem;
-  box-sizing: border-box;
+  padding: 1rem 0;
   color: var(--text-dark);
   background-color: var(--bg-light);
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Comments section */
+
 .comments-section {
   background-color: #f8f8f8;
   padding: 1rem;
@@ -133,4 +141,40 @@ header {
 .comment-votes {
   font-size: 0.9rem;
   color: #666;
+}
+.login-wrapper {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--bg-light);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  font-size: 0.9rem;
+}
+
+.login-wrapper input[type="text"] {
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  border: 1px solid var(--primary-red);
+  border-radius: 4px;
+  outline-offset: 2px;
+  outline-color: var(--primary-red);
+  min-width: 120px;
+}
+
+.login-wrapper button {
+  padding: 0.4em 1em;
+  font-size: 1rem;
+}
+.page-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
 }

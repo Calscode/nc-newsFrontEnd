@@ -90,6 +90,7 @@ function ArticleDetail() {
 
   return (
     <main className="article-detail-page">
+    <div className="page-container">
     <section className="article-detail">
     <h2>{article.title}</h2>
     <p className="article-author">By {article.author}</p>
@@ -147,6 +148,7 @@ function ArticleDetail() {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   </main>
   );
