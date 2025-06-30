@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import ArticleDetail from "./pages/ArticleDetails";
 import LoginForm from "./pages/loginForm";
 import { UserProvider, useUser } from "./state/userContext";
+import Topics from "./pages/Topics";
 
 
 
@@ -19,6 +20,7 @@ function AppContent() {
         <Route path="/" element={<Home />}/>
         <Route path="/articles" element={<Articles />} />
         <Route path="/articles/:article_id" element={<ArticleDetail />} />
+        <Route path="/topics" element={<Topics />}/>
       </Routes>
     </Router>
   )

@@ -25,3 +25,4 @@ export const postComment = (article_id, newComment) => {
     .post(`/articles/${article_id}/comments`, newComment)
     .then((res) => res.data.comment);
 };
+export const fetchTopics = () => api.get("/topics").then((res) => res.data.topics);
